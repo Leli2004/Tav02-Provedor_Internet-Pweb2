@@ -48,6 +48,8 @@ class AtendimentoController extends Controller
  
         $dados = ['tipo'=>$request->tipo,
         'descricao'=>$request->descricao,
+        'data'=>$request->data,
+        'hora'=>$request->hora,
         'setor_id'=>$request->setor_id,
         'cliente_id'=>$request->cliente_id,
         ];
@@ -95,6 +97,8 @@ class AtendimentoController extends Controller
 
         $dados = ['tipo'=>$request->tipo,
         'descricao'=>$request->descricao,
+        'data'=>$request->data,
+        'hora'=>$request->hora,
         'setor_id'=>$request->setor_id,
         'cliente_id'=>$request->cliente_id,
         ];

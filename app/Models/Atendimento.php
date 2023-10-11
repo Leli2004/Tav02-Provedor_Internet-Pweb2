@@ -16,7 +16,7 @@ class Atendimento extends Model
         'tipo',
         'descricao',
         'data',
-        'horario',
+        'hora',
     ];
 
     protected $casts = [
