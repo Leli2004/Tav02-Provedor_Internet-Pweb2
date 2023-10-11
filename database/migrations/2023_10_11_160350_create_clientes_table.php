@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('data_nascimento',15);
             $table->string('endereco',140);
             $table->foreignId('plano_id')->nullable()
-            ->constrained('plano')->default(null)->onDelete('restrict')->onUpdate('cascade');
+            ->constrained('plano')->default(null)->onDelete('cascade');
             $table->timestamps();
         });
     }

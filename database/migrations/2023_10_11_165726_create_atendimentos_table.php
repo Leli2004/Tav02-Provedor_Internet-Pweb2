@@ -11,17 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::disableForeignKeyConstraints();
-        
-        Schema::create('colaborador', function (Blueprint $table) {
+        Schema::create('atendimento', function (Blueprint $table) {
             $table->id();
-            $table->string('nome',100);
-            $table->string('funcao',50);
+            $table->string('tipo',60);
+            $table->string('descricao',200);
+            $table->string('data',60);
+            $table->string('hora',200);
+
+            $table->foreignId('cliente_id')->nullable()
+            ->constrained('cliente')->default(null)->onDelete('cascade');
+
             $table->foreignId('setor_id')->nullable()
             ->constrained('setor')->default(null)->onDelete('cascade');
+
             $table->timestamps();
+
         });
-        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -29,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('colaborador');
+        Schema::dropIfExists('atendimento');
     }
 };

@@ -5,6 +5,7 @@ use App\Http\Controllers\PlanoController;
 use App\Http\Controllers\SetorController;
 use App\Http\Controllers\ColaboradorController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\AtendimentoController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -34,3 +35,10 @@ Route::resource('/cliente', ClienteController::class);
 Route::post('/cliente/search',
     [ClienteController::class, 'search'])->name('cliente.search');
 
+//ROTAS ATENDIMENTO
+Route::resource('/atendimento', AtendimentoController::class);
+
+Route::post('/atendimento/search',
+    [AtendimentoController::class, 'search'])->name('atendimento.search');
+
+    

@@ -6,6 +6,8 @@
         <a href="" class="hover:text-blue-600">Home</a>
         <a href="{{ route('plano.index') }}" class="hover:text-blue-600">Planos</a>
         <a href="{{ route('setor.index') }}" class="hover:text-blue-600">Setores</a>
+        <a href="{{ route('cliente.index') }}" class="hover:text-blue-600">Clientes</a>
+        <a href="{{ route('atendimento.index') }}" class="hover:text-blue-600">Atendimentos</a>
         <a href="{{ route('colaborador.index') }}" class="hover:text-blue-600">Colaboradores</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
