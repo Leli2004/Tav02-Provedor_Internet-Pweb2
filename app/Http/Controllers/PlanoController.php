@@ -30,12 +30,24 @@ class PlanoController extends Controller
      */
     public function store(Request $request)
     {
-        /*$request->validate([
+        $request->validate([
             'nome'=>'required',
+            'tipo'=>'required',
+            'upload'=>'required',
+            'download'=>'required',
+            'valor'=>'required',
         ],[
-            'nome.required'=>"O :attribute é obrigatório!",
-            'nome.max'=>" Só é permitido 120 caracteres em :attribute !",
-        ]); */
+            'nome.required'=>"É obrigatório preencher o campo :attribute!",
+            'nome.max'=>"É permitido até 100 caracteres em :attribute !",
+            'tipo.required'=>"É obrigatório preencher o campo :attribute!",
+            'tipo.max'=>"É permitido até 20 caracteres em :attribute !",
+            'upload.required'=>"É obrigatório preencher o campo :attribute!",
+            'upload.max'=>"É permitido até 10 caracteres em :attribute !",
+            'download.required'=>"É obrigatório preencher o campo :attribute!",
+            'download.max'=>"É permitido até 10 caracteres em :attribute !",
+            'valor.required'=>"É obrigatório preencher o campo :attribute!",
+            'valor.max'=>"É permitido até 10 caracteres em :attribute !",
+        ]); 
 
         $dados = ['nome'=>$request->nome,
             'tipo'=>$request->tipo,
@@ -73,12 +85,24 @@ class PlanoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        /*$request->validate([
+        $request->validate([
             'nome'=>'required',
+            'tipo'=>'required',
+            'upload'=>'required',
+            'download'=>'required',
+            'valor'=>'required',
         ],[
-            'nome.required'=>"O :attribute é obrigatório!",
-            'nome.max'=>" Só é permitido 120 caracteres em :attribute !",
-        ]); */
+            'nome.required'=>"É obrigatório preencher o campo :attribute!",
+            'nome.max'=>"É permitido até 100 caracteres em :attribute !",
+            'tipo.required'=>"É obrigatório preencher o campo :attribute!",
+            'tipo.max'=>"É permitido até 20 caracteres em :attribute !",
+            'upload.required'=>"É obrigatório preencher o campo :attribute!",
+            'upload.max'=>"É permitido até 10 caracteres em :attribute !",
+            'download.required'=>"É obrigatório preencher o campo :attribute!",
+            'download.max'=>"É permitido até 10 caracteres em :attribute !",
+            'valor.required'=>"É obrigatório preencher o campo :attribute!",
+            'valor.max'=>"É permitido até 10 caracteres em :attribute !",
+        ]); 
 
         $dados = ['nome'=>$request->nome,
             'tipo'=>$request->tipo,

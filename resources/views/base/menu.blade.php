@@ -3,7 +3,7 @@
       <div class="flex lg:flex-1">
       </div>
       <div class="hidden lg:flex lg:gap-x-12 items-center justify-between">
-        <a href="" class="hover:text-blue-600">Home</a>
+        <a href="{{ url('/') }}" class="hover:text-blue-600">Home</a>
         <a href="{{ route('plano.index') }}" class="hover:text-blue-600">Planos</a>
         <a href="{{ route('setor.index') }}" class="hover:text-blue-600">Setores</a>
         <a href="{{ route('cliente.index') }}" class="hover:text-blue-600">Clientes</a>

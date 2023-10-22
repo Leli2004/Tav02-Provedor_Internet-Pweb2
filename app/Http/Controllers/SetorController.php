@@ -30,12 +30,18 @@ class SetorController extends Controller
      */
     public function store(Request $request)
     {
-        /*$request->validate([
+        $request->validate([
             'nome'=>'required',
+            'codigo'=>'required',
+            'atribuicoes'=>'required',
         ],[
-            'nome.required'=>"O :attribute é obrigatório!",
-            'nome.max'=>" Só é permitido 120 caracteres em :attribute !",
-        ]); */
+            'nome.required'=>"É obrigatório preencher o campo :attribute!",
+            'nome.max'=>"É permitido até 100 caracteres em :attribute !",
+            'codigo.required'=>"É obrigatório preencher o campo :attribute!",
+            'codigo.max'=>"É permitido até 20 caracteres em :attribute !",
+            'atribuicoes.required'=>"É obrigatório preencher o campo :attribute!",
+            'atribuicoes.max'=>"É permitido até 200 caracteres em :attribute !",
+        ]); 
 
         $dados = ['nome'=>$request->nome,
             'codigo'=>$request->codigo,
@@ -71,12 +77,18 @@ class SetorController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        /*$request->validate([
+        $request->validate([
             'nome'=>'required',
+            'codigo'=>'required',
+            'atribuicoes'=>'required',
         ],[
-            'nome.required'=>"O :attribute é obrigatório!",
-            'nome.max'=>" Só é permitido 120 caracteres em :attribute !",
-        ]); */
+            'nome.required'=>"É obrigatório preencher o campo :attribute!",
+            'nome.max'=>"É permitido até 100 caracteres em :attribute !",
+            'codigo.required'=>"É obrigatório preencher o campo :attribute!",
+            'codigo.max'=>"É permitido até 20 caracteres em :attribute !",
+            'atribuicoes.required'=>"É obrigatório preencher o campo :attribute!",
+            'atribuicoes.max'=>"É permitido até 200 caracteres em :attribute !",
+        ]); 
 
         $dados = ['nome'=>$request->nome,
             'codigo'=>$request->codigo,

@@ -48,15 +48,20 @@
                 <thead>
                   <tr>
                     <th scope="col">ID</th>
+                    <th scope="col">Imagem</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Função</th>
                     <th scope="col">Setor</th>
                   </tr>
                 </thead>
                 @foreach ($colaboradores as $item)
+                @php
+                  $nome_imagem = !empty($item->imagem) ? $item->imagem : 'sem_imagem.jpg';
+                @endphp
                 <tbody>
                   <tr>
                     <td>{{$item->id}}</td>
+                    <td><img src="/storage/{{ $nome_imagem }}" width="100px" alt="imagem"></td>
                     <td>{{$item->nome}}</td>
                     <td>{{$item->funcao}}</td>
                     <td>{{$item->setor->nome ?? ""}}</td>

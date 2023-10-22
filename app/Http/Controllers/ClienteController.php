@@ -33,12 +33,23 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        /*$request->validate([
+        $request->validate([
             'nome'=>'required',
+            'cpf'=>'required',
+            'data_nascimento'=>'required',
+            'endereco'=>'required',
+            'plano_id'=>'required',
         ],[
-            'nome.required'=>"O :attribute é obrigatório!",
-            'nome.max'=>" Só é permitido 120 caracteres em :attribute !",
-        ]); */
+            'nome.required'=>"É obrigatório preencher o campo :attribute!",
+            'nome.max'=>"É permitido até 120 caracteres em :attribute !",
+            'cpf.required'=>"É obrigatório preencher o campo :attribute!",
+            'cpf.max'=>"É permitido até 20 caracteres em :attribute !",
+            'data_nascimento.required'=>"É obrigatório preencher o campo :attribute!",
+            'data_nascimento.max'=>"É permitido até 15 caracteres em :attribute !",
+            'endereco.required'=>"É obrigatório preencher o campo :attribute!",
+            'endereco.max'=>"É permitido até 140 caracteres em :attribute !",
+            'plano_id.required'=>"É obrigatório preencher o campo :attribute!",
+        ]);  
 
         $dados = ['nome'=>$request->nome,
             'cpf'=>$request->cpf,
@@ -79,12 +90,23 @@ class ClienteController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        /*$request->validate([
+        $request->validate([
             'nome'=>'required',
+            'cpf'=>'required',
+            'data_nascimento'=>'required',
+            'endereco'=>'required',
+            'plano_id'=>'required',
         ],[
-            'nome.required'=>"O :attribute é obrigatório!",
-            'nome.max'=>" Só é permitido 120 caracteres em :attribute !",
-        ]); */
+            'nome.required'=>"É obrigatório preencher o campo :attribute!",
+            'nome.max'=>"É permitido até 120 caracteres em :attribute !",
+            'cpf.required'=>"É obrigatório preencher o campo :attribute!",
+            'cpf.max'=>"É permitido até 20 caracteres em :attribute !",
+            'data_nascimento.required'=>"É obrigatório preencher o campo :attribute!",
+            'data_nascimento.max'=>"É permitido até 15 caracteres em :attribute !",
+            'endereco.required'=>"É obrigatório preencher o campo :attribute!",
+            'endereco.max'=>"É permitido até 140 caracteres em :attribute !",
+            'plano_id.required'=>"É obrigatório preencher o campo :attribute!",
+        ]);
 
         $dados = ['nome'=>$request->nome,
             'cpf'=>$request->cpf,

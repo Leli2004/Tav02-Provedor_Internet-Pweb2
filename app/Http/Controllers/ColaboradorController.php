@@ -33,12 +33,18 @@ class ColaboradorController extends Controller
      */
     public function store(Request $request)
     {
-        /*$request->validate([
+
+        $request->validate([
             'nome'=>'required',
+            'funcao'=>'required',
+            'setor_id'=>'required',
         ],[
-            'nome.required'=>"O :attribute é obrigatório!",
-            'nome.max'=>" Só é permitido 120 caracteres em :attribute !",
-        ]); */
+            'nome.required'=>"É obrigatório preencher o campo :attribute!",
+            'nome.max'=>"É permitido até 120 caracteres em :attribute !",
+            'funcao.required'=>"É obrigatório preencher o campo :attribute!",
+            'funcao.max'=>"É permitido até 50 caracteres em :attribute !",
+            'setor_id.required'=>"É obrigatório preencher o campo :attribute!",
+        ]);  
 
         $dados = ['nome'=>$request->nome,
             'funcao'=>$request->funcao,
@@ -77,12 +83,17 @@ class ColaboradorController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        /*$request->validate([
+        $request->validate([
             'nome'=>'required',
+            'funcao'=>'required',
+            'setor_id'=>'required',
         ],[
-            'nome.required'=>"O :attribute é obrigatório!",
-            'nome.max'=>" Só é permitido 120 caracteres em :attribute !",
-        ]); */
+            'nome.required'=>"É obrigatório preencher o campo :attribute!",
+            'nome.max'=>"É permitido até 120 caracteres em :attribute !",
+            'funcao.required'=>"É obrigatório preencher o campo :attribute!",
+            'funcao.max'=>"É permitido até 50 caracteres em :attribute !",
+            'setor_id.required'=>"É obrigatório preencher o campo :attribute!",
+        ]);  
 
         $dados = ['nome'=>$request->nome,
             'funcao'=>$request->funcao,

@@ -15,7 +15,8 @@ return new class extends Migration
         
         Schema::create('colaborador', function (Blueprint $table) {
             $table->id();
-            $table->string('nome',100);
+            $table->String('imagem',150)->nullable();
+            $table->string('nome',120);
             $table->string('funcao',50);
             $table->foreignId('setor_id')->nullable()
             ->constrained('setor')->default(null)->onDelete('cascade');

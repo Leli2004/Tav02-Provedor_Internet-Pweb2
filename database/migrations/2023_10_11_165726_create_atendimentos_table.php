@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('tipo',60);
             $table->string('descricao',200);
-            $table->string('data',60);
-            $table->string('hora',200);
+            $table->string('data',15);
+            $table->string('hora',15);
 
             $table->foreignId('cliente_id')->nullable()
             ->constrained('cliente')->default(null)->onDelete('cascade');

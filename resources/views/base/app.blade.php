@@ -17,7 +17,7 @@
             }
         }
     </script>
-    <title>@yield('titulo') - SisACAD</title>
+    <title>@yield('titulo') - Provedor</title>
 </head>
 
 <body>

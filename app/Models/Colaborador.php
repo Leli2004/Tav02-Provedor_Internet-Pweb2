@@ -14,6 +14,7 @@ class Colaborador extends Model
     protected $fillable = ['nome',
         'funcao',
         'setor_id',
+        'imagem',
     ];
 
     protected $casts = [

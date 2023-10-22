@@ -40,11 +40,25 @@ class AtendimentoController extends Controller
      */
     public function store(Request $request)
     {
-        /*$request->validate([
-            'curso_id'=>'required',
+        $request->validate([
+            'tipo'=>'required',
+            'descricao'=>'required',
+            'data'=>'required',
+            'hora'=>'required',
+            'setor_id'=>'required',
+            'cliente_id'=>'required',
         ],[
-            'curso_id.required'=>"O :attribute é obrigatório!",
-        ]); */
+            'tipo.required'=>"É obrigatório preencher o campo :attribute!",
+            'tipo.max'=>"É permitido até 60 caracteres em :attribute !",
+            'descricao.required'=>"É obrigatório preencher o campo :attribute!",
+            'descricao.max'=>"É permitido até 200 caracteres em :attribute !",
+            'data.required'=>"É obrigatório preencher o campo :attribute!",
+            'data.max'=>"É permitido até 15 caracteres em :attribute !",
+            'hora.required'=>"É obrigatório preencher o campo :attribute!",
+            'hora.max'=>"É permitido até 15 caracteres em :attribute !",
+            'setor_id.required'=>"É obrigatório preencher o campo :attribute!",
+            'cliente_id.required'=>"É obrigatório preencher o campo :attribute!",
+        ]); 
  
         $dados = ['tipo'=>$request->tipo,
         'descricao'=>$request->descricao,
@@ -89,11 +103,25 @@ class AtendimentoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        /*$request->validate([
-            'curso_id'=>'required',
+        $request->validate([
+            'tipo'=>'required',
+            'descricao'=>'required',
+            'data'=>'required',
+            'hora'=>'required',
+            'setor_id'=>'required',
+            'cliente_id'=>'required',
         ],[
-            'curso_id.required'=>"O :attribute é obrigatório!",
-        ]); */
+            'tipo.required'=>"É obrigatório preencher o campo :attribute!",
+            'tipo.max'=>"É permitido até 60 caracteres em :attribute !",
+            'descricao.required'=>"É obrigatório preencher o campo :attribute!",
+            'descricao.max'=>"É permitido até 200 caracteres em :attribute !",
+            'data.required'=>"É obrigatório preencher o campo :attribute!",
+            'data.max'=>"É permitido até 15 caracteres em :attribute !",
+            'hora.required'=>"É obrigatório preencher o campo :attribute!",
+            'hora.max'=>"É permitido até 15 caracteres em :attribute !",
+            'setor_id.required'=>"É obrigatório preencher o campo :attribute!",
+            'cliente_id.required'=>"É obrigatório preencher o campo :attribute!",
+        ]); 
 
         $dados = ['tipo'=>$request->tipo,
         'descricao'=>$request->descricao,

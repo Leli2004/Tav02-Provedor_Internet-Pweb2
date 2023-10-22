@@ -20,6 +20,7 @@ class ColaboradorSeeder extends Seeder
                 'nome'=>$faker->name,
                 'funcao'=>$faker->word,
                 'setor_id'=>$faker->numberBetween($min = 1, $max = 10),
+                'imagem'=>$faker->image('storage/app/public/images',640,480, null, false),
             ]);
         }
     }

@@ -8,7 +8,7 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\AtendimentoController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 //ROTAS PLANO
